@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>WebSite/Clone</title>
+    <link rel="stylesheet" href="styles.min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  </head>
+  <body>
+    <!-- ヘッダーここから -->
+    <header>
+
+      <div id="headeritem">
+
+        <!-- ヘッダー上部 -->
+        <div class="header_top head-animation" >
+          <h1 class="title"><a href="#">トバログ</a></h1>
+          <nav class="nav">
+            <ul class="nav_ul">
+              <li><a href="#">トバログについて</a></li>
+              <li><a href="#">ポートフォリオ</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            </ul>
+          </nav>
+          
+        </div>
+
+        <!-- サーチの作成ここから -->
+        <div class="serch_window head-animation">
+          <!-- 1.サーチボタンの作成 -->
+          <a href="#" class="serch " id="open"><img src="img/magnifying-glass.png" alt="検索する"></a>
+          <a href="#" class="serch hidden" id="close"><img src="img/cancel.png" alt="閉じる"></a>
+          <!-- 2.マスクの作成 -->
+          <div id="mask" class="hidden"></div>
+          <!-- サーチウィンドウ 内のデザイン -->
+          <div id="modal" class="hidden">
+        
+            <h3>検索<br><span>SEARCH</span></h3>
+        
+            <div class="modal_category">
+              <a href="#">僕だけの自作キーボード</a>
+              <a href="#">ミニマルなもの</a>
+              <a href="#">ベストバイ</a>
+              <a href="#">旅、台北。</a>
+              <a href="#">旅、韓国。</a>
+              <a href="#">賃貸でも書斎のある暮らし</a>
+              <a href="#">旅、韓国。</a>
+              <a href="#">賃貸でも書斎のある暮らし</a>
+            </div>
+        
+            <div class="modal_input">
+              <form class="serch_result" action="#">
+                <input id="search_input" type="text" style="
+                    width: 100%;
+                    height: 30px;
+                    background:  #b4b4b4;">
+              </form>
+            </div>
+          </div>
+        </div>
+          <!-- サーチの作成ここまで -->   
+
+        <!-- ハンバーガーメニューの作成 -->
+        <div class="hb_menu head-animation">
+          <input type="checkbox" id="input">
+          <label for="input">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </label>
+
+          <div id="content">
+            <ul class="list">
+              <li><a href="#">トバログについて</a></li>
+              <li><a href="#">ポートフォリオ</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="header_sns head-animation">
+          <li>
+            <a href="#">
+              <img src="img/twitter.png" alt="ツイッター表示">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/instagram.png" alt="インスタグラム表示">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/youtube.png" alt="youtube表示">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </header>
+    <!-- ヘッダーここまで -->
+
+    <!-- レスポンシブ用navここから -->
+    <div class="headerbottom_nav">
+      <nav>
+        <ul>
+          <li><a href="#">TOP</a></li>
+          <li><a href="#">新着情報</a></li>
+          <li><a href="#">カテゴリー</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- レスポンシブ用navここまで -->
+
+    <!-- About meここから -->
+    <div class="aboutme_content">
+       <a href="#">
+         <p>
+           <span>
+             ABOUT ME
+           </span>
+         </p>
+       </a>
+    </div>
+    <!-- About meここまで -->
+
+    <!-- News1ここから -->
+    <div class="newsbox newsboxone">
+      <div class="newstitle newstitleone">
+        <h2>新着情報<br>
+        <span>NEWS</span></h2>
+      </div>
+
+        <div class="newscontent">
+          <ul>
+            <li>     
+              <a href="#">
+                <div class="newcontet_img">
+                 <img src="img/news1-1.png" alt="記事サイト">
+                </div>
+                <p>家具と家電</p>
+                <dl>
+                  <dt>2020/09/07</dt>
+                  <dd>センスの良い除湿機『Cado ROOT7100』レビュー</dd>
+                </dl>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="newcontet_img">
+                  <img src="img/news1-2.png" alt="記事サイト">
+                </div>
+                <p>カメラと写真</p>
+              <dl>
+                <dt>2020/09/03</dt>
+                <dd>夏の終わりにLeica10を持って</dd>
+              </dl>
+            </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="newcontet_img">
+                   <img src="img/news1-3.png" alt="記事サイト">
+                </div>
+                <p>カメラと写真</p>
+              <dl>
+                <dt>2020/08/26</dt>
+                <dd>YouTube撮影用ブースを構築！俯瞰も自撮りも1本の突っ張り棒で完結</dd>
+              </dl>
+            </a>
+            </li>
+          </ul>
+       </div>
+
+       <div class="newsbox_btn">
+         <a href="">ほかの記事</a>
+        
+       </div>
+    </div>
+    <!-- News1ここまで -->
+
+    <!-- News2ここから -->
+    <div class="newsbox newsboxtwo">
+      <div class="newstitle newstitletwo">
+        <h2>人気の記事<br>
+        <span>POPULAR</span></h2>
+
+       <div class="newscontent">
+          <ul>
+
+            <li>
+              <a href="#">
+                <div class="newcontet_img">
+                   <img src="img/news2-1.png" alt="記事サイト">
+                </div>
+                <p>ガジェットモノのレビュー</p>
+              <dl>
+                <dt>2020/07/15</dt>
+                <dd>【買った理由】16インチMacBook Proも100Wで急速充電！コンパクトな窒化ガリウム充電器</dd>
+              </dl>
+            </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="newcontet_img">
+                   <img src="img/news2-2.png" alt="記事サイト">
+                </div>
+                <p>暮らしのこと</p>
+              <dl>
+                <dt>2020/07/30</dt>
+                <dd>都心から郊外へ引っ越す4つの理由</dd>
+              </dl>
+            </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <div class="newcontet_img">
+                   <img src="img/news2-3.png" alt="記事サイト">
+                </div>
+                <p>暮らしのこと</p>
+              <dl>
+                <dt>2020/09/07</dt>
+                <dd>独立した作業スペースのある物件に引っ越しました。</dd>
+              </dl>
+            </a>
+            </li>
+
+          </ul>
+       </div>
+
+       <div class="newsbox_btn">
+         <a href="">ほかの記事</a>
+        
+       </div>
+      </div>
+
+    </div>
+
+    </div>
+    <!-- News2ここまで -->
+
+    <!-- メイン画像ここから -->
+    <div class="mainimg">
+      <a href="#">
+      <img src="img/mainimg.png" alt="賃貸でも書斎のある暮らし">
+      </a>
+    </div>
+    <!-- メイン画像ここまで -->
+
+    <!-- カテゴリー一覧ここから -->
+    <div class="category">
+      <div class="newstitle">
+        <h2>カテゴリー一覧<br>
+        <span>CATEGORY</span></h2>
+      </div>
+
+      <ul>
+        <li>
+          <dl>
+            <div class="category_img">
+              <div class="category_title">
+                <h3>旅とトバログ</h3><!-- 画像の上に白色で記載する文字 -->
+                <p>TRAVEL</p><!-- 画像の上に白色で記載する文字 -->
+              </div>
+              <img src="img/category1-1.png" alt="カテゴリー写真">
+            </div>
+            <dd><a href="#">トバログの半移住</a></dd>
+            <dd><a href="#">旅、韓国</a></dd>
+            <dd><a href="#">旅、台北。</a></dd>
+            <dd><a href="#">旅。チェコ。</a></dd>
+            <dd><a href="#">タイ。</a></dd>
+            <dd><a href="#">おすすめのトラベルグッズ</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <div class="category_img">
+              <div class="category_title">
+                <h3>写真のコト</h3>
+                <p>PHOTO</p>
+              </div>
+              <img src="img/category1-2.png" alt="カテゴリー写真">
+            </div>
+            <dd><a href="#">カメラと散歩</a></dd>
+            <dd><a href="#">Leica</a></dd>
+            <dd><a href="#">僕とLeica M10</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <div class="category_img">
+              <div class="category_title">
+                <h3>暮らし</h3>
+                <p>LIVING</p>
+              </div>
+              <img src="img/category1-3.png" alt="カテゴリー写真">
+            </div>
+            <dd><a href="#">＃無印良品のある暮らし</a></dd>
+            <dd><a href="#">一人暮らしホームシアター</a></dd>
+            <dd><a href="#">賃貸でも書斎のある暮らし</a></dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <div class="category_img">
+              <div class="category_title">
+                <h3>ガジェット</h3>
+                <p>GADGET</p>
+              </div>
+              <img src="img/category1-4.png" alt="カテゴリー写真">
+            </div>
+            <dd><a href="#">僕だけの自作キーボード</a></dd>
+            <dd><a href="#">ミニマルなもの</a></dd>
+            <dd><a href="#">ベストバイ</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <!-- カテゴリー一覧ここまで -->
+
+    <!-- フッターここから -->
+    <footer>
+      <div class="footer_title">
+        <h2><a href="#">トバログ<br><span>TOBALOG.COM</span></a></h2>
+      </div>
+      <ul>
+        <li><a href="#">トバログについて</a></li>
+        <li><a href="#">PR実績</a></li>
+        <li><a href="#">PRの依頼や問合せ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+      <p>©︎2020 トバログ</p>
+    </footer>
+    <!-- フッターここまで -->
+  
+    <script src=js/main.js></script>
+  </body>
+</html>

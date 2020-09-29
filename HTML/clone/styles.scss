@@ -1,0 +1,715 @@
+// ＝＝＝＝＝＝＝＝ 
+// 全体設計ここから
+// ＝＝＝＝＝＝＝＝
+body{
+font-family: dnp-shuei-gothic-gin-std, YuGothic, Yu Gothic, Hiragino Sans, Hiragino Kaku Gothic ProN, Meiryo, sans-serif;
+background: #F9F9F9;
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// ヘッダーCSSここから
+// ＝＝＝＝＝＝＝＝
+
+header{ 
+  width: 100%;
+  height: 500px;
+  background-image: url(img/header_img.png);
+
+  // #headeritem{
+  //     height: auto;
+
+    .header_top{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    position: relative;
+
+
+    
+    h1 a{
+      text-decoration: none;
+      color: black;
+      &:hover{
+        color: gray;
+      }
+    }
+
+    ul{
+        margin-left: 300px;
+        display: flex;
+        li{
+        list-style: none;
+          a{
+            font-size: 14px;
+            text-decoration: none;
+            color: black;
+            padding: 40px;
+            &:hover{
+              color: gray;
+            }
+            }
+          }
+        }
+      } 
+      .serch_window{
+        position: relative;
+        z-index: 100;
+        #open, #close{
+            img{
+              position: absolute;
+              top: -30px;
+              right: 20px;
+              background: white;
+              width: 20px;
+              height: 20px;
+              padding: 10px;
+              &:hover{
+                background: gray;
+              }
+            }
+          }
+          #close.hidden{
+            display: none;
+          }
+        #mask.hidden{
+          display: none;
+          }
+          #modal{
+            background: white;
+            width: 70%;
+            margin: 0 auto;
+            h3{
+              padding-top: 30px;
+              text-align: center;
+              line-height: 24px;
+              font-size: 24px;
+              font-weight: normal;
+              letter-spacing: 2px;
+              span{
+                font-size: 14px;
+                color: #B4B4B4;
+              }
+            }
+            .modal_category{
+              display: flex;
+              flex-wrap: wrap;
+            a{
+              margin: 5px 10px;
+              border: 1px solid black;
+              text-decoration: none;
+              color: black;
+              font-size: 14px;
+              padding: 5px 10px;
+              cursor: pointer;
+              &:hover{
+                color: #B4B4B4;
+              }
+            }
+          }
+          .modal_input{
+            width: 90%;
+            display: flex;
+            margin: 20px auto;
+            padding-bottom: 40px;
+          .serch_result{
+            width: 500px;
+            margin: 0 auto;
+          }
+          }
+          }
+          #modal.hidden{
+            display: none;
+          }
+        }
+    .hb_menu{
+      transform: translateY(-9999px);
+    }
+
+    .header_sns{
+      // ここのコードどうでしょうか？
+      display: flex;
+      margin-right: 20px;
+      margin-top: 100px;
+      align-items:flex-end;
+      justify-content: flex-end; 
+      flex-direction: column;
+
+      li{
+        list-style: none;
+        width: 30px;
+        height: 30px;
+        background: white;
+        margin-top: 20px;
+        &:hover{
+          background: gray;
+        }
+        a{
+        }
+        img{
+          width: 20px;
+          height: 20px;
+          padding: 5px;
+        }
+      }
+    }
+    
+ }
+
+// ＝＝＝＝＝＝＝＝ 
+// Aboutme CSSここから
+// ＝＝＝＝＝＝＝＝
+.aboutme_content{
+    height: 200px;
+    width: 600px;
+    margin: 20px auto 85px auto;
+    background-image: url(img/aboutme.png);
+    &:before{ 
+    }
+    a{
+      text-decoration: none;
+      p{
+      color: black;
+      text-decoration: none;
+      position: absolute;
+      margin-top: 80px;
+      margin-left: 350px;
+      letter-spacing: 3px;
+        span{
+          font-size: 28px; 
+          font-weight: bold; 
+        }
+      }
+    }
+}
+
+.headerbottom_nav{
+  visibility : hidden;
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// News共通 ここから
+// ＝＝＝＝＝＝＝＝
+.newsbox{
+  width: 90%;
+  height: 670px;
+  background: white;
+  margin: 0 auto 40px auto;
+  .newstitle{
+    padding-top: 60px;
+    h2{
+      text-align: center;
+      letter-spacing: 8px;
+      font-size: 25px;
+      line-height: 25px;
+      span{
+        line-height: 15px;
+        font-size: 15px;
+        color: gray;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+
+.newscontent {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 80px auto 50px auto;
+    ul{
+      display: flex;
+      margin: 0 auto;
+      padding-inline-start: 0px;
+      li{
+        list-style: none;
+        margin: 0 auto;
+        width: 30%;
+        overflow:hidden;
+        a {
+          text-decoration: none;
+          color: black;
+          position: relative;
+          img {
+            transition: all 0.5s;
+            width: 100%;
+            height: auto;
+            &:hover{
+              transform:scale(1.05,1.05);
+            }
+          }
+          p {
+            line-height: auto;
+            background:#f9f9f9;
+            width: 100px;
+            text-align: center;
+            font-size: 13px;
+            position: absolute;
+            top: -11px;
+            right: 0;
+          }
+        }
+        dl{
+          margin: 0;
+          width: auto;
+          &:hover{
+            color: #B4B4B4;
+          }
+          dt {
+            font-size: 11px;
+            color: #B4B4B4;
+          }
+          dd{
+            padding-top: 10px;
+            font-size: 16px;
+            margin-left: 0;
+            font-weight: bold;
+          }
+        }
+      }   
+    }
+}
+
+.newsbox_btn{
+  width: 260px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  &:hover{
+    background-color: #333;
+    transition: all 0.4s;
+  }
+  a{
+    display: inline-block;
+    width: 260px;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+    &:hover{
+      color: white;
+      transition: all 0.4s;
+    }
+    }
+    
+  }
+
+// ＝＝＝＝＝＝＝＝ 
+// メイン画像ここから
+// ＝＝＝＝＝＝＝＝
+.mainimg{
+  margin: 50px auto;
+  width: 720px;
+  height: 400px;
+  img{
+    transition: all 0.2s;
+  &:hover{
+    display: block;
+    filter:brightness(105%); 
+   }
+ }
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// カテゴリー一覧ここから
+// ＝＝＝＝＝＝＝＝
+
+.category{
+  width: 90%;
+  background: white;
+  height: auto;
+  margin: 0 auto;
+  .newstitle{
+    padding: 60px 0;
+    h2{
+      text-align: center;
+      letter-spacing: 8px;
+      font-size: 25px;
+      line-height: 25px;
+      span{
+        line-height: 15px;
+        font-size: 15px;
+        color: gray;
+        letter-spacing: 4px;
+      }
+    }
+  }
+  ul{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline-start: 0;
+    margin: 0 auto;
+    li{
+      list-style: none;
+      width: 48%;
+      height: auto;
+      padding-bottom: 60px;
+      .category_img{
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+        }
+        .category_title{
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          text-align: center;
+          color: white;
+          line-height: 10px;
+          letter-spacing: 4px;
+          p{
+            font-size: 12px;
+          }
+        }
+       img{
+         width: 100%;
+         height: auto;
+      }
+    }
+    
+      dl{  
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        dd{
+          margin-top: 10px;
+          text-align: center;
+          width: 49%;
+          background: #f3f3f3;  
+          margin-inline-start: 0;
+          a{
+            font-size: 12px;
+            line-height: 15px;  
+            text-decoration: none;
+            color: black;
+          
+          }
+        }
+      }
+    }
+  }
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// フッターここから
+// ＝＝＝＝＝＝＝＝
+footer{
+  width: 100%;
+  height: 240px;
+  background: black;
+  .footer_title{
+    text-align: center;
+    padding: 40px 0;
+    h2{
+      line-height: 20px;
+      font-size: 40px;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      letter-spacing: 8px;
+      a{
+        text-decoration: none;
+        color: white;
+        &:hover{
+          color: #B4B4B4;
+        }
+        span{
+          font-size: 5px;
+          line-height: 12px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  ul{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    li{
+      a{
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        &:hover{
+          color: #B4B4B4;
+        }
+      }
+    }
+  }
+  p{
+    font-size: 10px;
+    color: #B4B4B4;
+    margin-top: 70px;
+    text-align: center;
+  }
+}
+
+// △残課題
+// 1.ヘッダーアニメーション
+// 2.Aboutmeアニメーション
+// 3.カテゴリー内の文字の調整
+.hidden{
+  display: none;
+}
+
+// ＝＝＝＝＝＝＝＝ 
+// ＝＝＝＝＝＝＝＝ 
+//タブレッドサイズ作成
+// ＝＝＝＝＝＝＝＝
+// ＝＝＝＝＝＝＝＝
+
+@media (max-width: 1020px)  {
+// △タブレッドTODO
+// 1.ヘッダーh1を横並びにするし、画像調整
+header{ 
+  height: 250px;
+  .header_top{
+    height: 50px;
+    position: relative;
+
+     ul{
+       display: none;
+        }
+
+    .serch{
+      position: absolute;
+      top: 20px ;
+      right: 20px;
+      }
+
+    }
+
+    .header_sns{
+      margin-top: 20px;
+    }
+
+    .hb_menu{
+      transform: translateY(0);
+      position: absolute;
+      right: -160px;
+      top: 30px;
+      #input{
+        display: none;
+      }
+      
+      .line{
+        width: 30px;
+        height: 3px;
+        background: black;
+        margin: 8px;
+      }
+      
+      #content{
+        background: white;
+        width: 300px;
+        height: 200px;
+        margin: 0 auto;
+        transform: translateX(1200px);
+        ul li{
+          padding: 20px 0 10px 0;
+          list-style: none;
+          width: 80%;
+          border-bottom: 2px solid black;
+          a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+              color: #B4B4B4; 
+            }
+          }
+        }
+      }
+      
+      #input:checked ~ #content{
+        transform: translateX(-150px);
+      }
+    }
+  }
+
+  // 2.ナブタグを横並びにする=>解決
+.headerbottom_nav{
+  margin: 0 auto;
+  visibility : visible;
+  width: 70%;
+  border-bottom: 1px solid #f3f3f3;
+  nav ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  li{
+    list-style: none;
+    text-align: center;
+    a{
+      text-decoration: none;
+      color: black;
+      width: 150px ;
+      line-height: 20px;
+      display: inline-block;
+      font-size: 12px;
+      &:active{
+        font-weight: bold;
+        background: #f3f3f3;
+      }
+    }
+  }
+}
+
+// 3.カテゴリーを横並べにする=>解決
+footer ul li a{
+  font-size: 12px;
+}
+}
+
+
+
+
+
+// ＝＝＝＝＝＝＝＝ 
+// ＝＝＝＝＝＝＝＝ 
+//スマホサイズ作成
+// ＝＝＝＝＝＝＝＝
+// ＝＝＝＝＝＝＝＝
+
+@media (max-width: 767px) {
+// スマホサイズTODO
+
+
+// 1.aboutmeの横幅=>解決
+.aboutme_content{
+  width: 95%;
+  height: 150px;
+  margin: 40px auto 40px auto;
+  box-sizing: border-box;
+  position: relative;
+  a p{
+    position: absolute;
+    left: 60%;
+    top: 60%;
+    margin: 0;
+    span{
+      font-size: 20px;
+      font-weight: normal;
+    }
+  }
+}
+// 2.Newsのレイアウト =>横並びにする
+.newsbox{
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  .newstitle{
+    padding-top: 30px;
+    h2{
+      font-size: 20px;
+      line-height: 20px;
+      span{
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+  .newsbox_btn{
+    height: 40px;
+    a{
+      line-height: 40px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+  }
+}
+
+.newscontent {
+  margin: 30px auto 30px auto;
+  ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    li{
+      width: 250px;
+      margin-bottom: 20px;
+      display: flex;
+        a .newcontet_img{
+          width: 250px;
+          height: auto;
+        }
+      dl{
+        width: 250px;
+        dt{
+          font-size: 12px;
+          dd{
+            font-size: 13px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 3.メイン画像サイズ =>解決
+.mainimg{
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+  img{
+    width: 450px;
+  }
+}
+// 4.カテゴリー一覧サイズ =>解決
+.category{
+  height: auto;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  .newstitle{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    h2{
+      font-size: 20px;
+      line-height: 20px;
+      span{
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+ul{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  li{
+    width: 100%;
+    padding-bottom: 10px;
+    .category_img{
+      height: 150px;
+     img{
+       height: 150px;
+    }
+  }
+  
+    dl dd{
+      width: 33%;}
+      }
+    }
+  }
+
+
+
+// 5.フッターーの子要素＋コピーらいと調整 =>解決
+footer ul li a{
+  font-size: 10px;
+}
+}
